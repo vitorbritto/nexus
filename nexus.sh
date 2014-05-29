@@ -2,34 +2,31 @@
 
 # ------------------------------------------------------------------------------
 #
-# Program: yoda.sh
+# Program: nexus.sh
 # Author:  Vitor Britto
 #
 # Description:
-#       This is my personal READ LATER method.
+#       Nexus is a simple and fast method to start a web server
 #
 # Important:
-#       First of all, define where you want to save your "readlater" file
-#       then make this script executable to easily run it.
-#       $ chmod u+x yoda.sh
+#       Make this script executable to easily run it.
+#       $ chmod u+x nexus.sh
 #
 # Usage:
-#       INSERT: ./yoda.sh 'NAME' 'http://URL'
-#       VIEW:   ./yoda.sh [ -l, --list   ]
-#       OPEN:   ./yoda.sh [ -o, --open   ]
-#       HELP:   ./yoda.sh [ -h, --help   ]
-#       EXPORT: ./yoda.sh [ -e, --export ]
+#       ./nexus.sh [options] <port>
 #
-# Assumptions:
-#       - The url of interest is a simple one.
+# Options:
+#       --php           Start a webserver with PHP
+#       --py            Start a webserver with Python
+#
+# Example:
+#       Start a PHP webserver
+#       $ ./nexus.sh --php 8080
 #
 # Alias:
-#       alias yoda="bash ~/path/to/script/yoda.sh"
+#       alias nexus="bash ~/path/to/script/nexus.sh"
 #
 # ------------------------------------------------------------------------------
-# TODO: regex for grep on export bookmarks
-# ------------------------------------------------------------------------------
-
 
 
 # ------------------------------------------------------------------------------
@@ -39,7 +36,7 @@
 # Start webserver Function
 nexus_start() {
     # Start an HTTP server from a directory, optionally specifying the port
-    if [[ "${1}" == "--py" ]]; then
+    if [[ "${1}" == "-py" ]]; then
         local port="${3:-8000}"
         echo "HINT: Press CTRL+C to stop webserver"
         sleep 1 && open "http://localhost:${port}/" &
@@ -49,7 +46,7 @@ nexus_start() {
     fi
 
     # Start a PHP server from a directory, optionally specifying the port
-    if [[ "${1}" == "--php" ]]; then
+    if [[ "${1}" == "-php" ]]; then
         local port="${3:-4000}"
         local ip=$(ipconfig getifaddr en1)
         echo "HINT: Press CTRL+C to stop webserver"
