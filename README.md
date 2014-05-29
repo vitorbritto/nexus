@@ -10,7 +10,7 @@ Nexus is a simple and fast method to start a web server
 - [PHP v5.4+](http://www.php.net/)
 - [Python v2.6+](https://www.python.org/)
 
-**Important:** make sure you start the webserver inside the current project directory.
+**Important:** make sure you start the web server inside the current project directory.
 
 
 ## Installation
@@ -32,11 +32,11 @@ $ chmod u+x path/to/nexus.sh
 
     $ ./nexus.sh [options] <port>
 
-> Note: <port> is optional
+> Note: `<port>` is optional
 
 ### Options:
-      --php     start a webserver with PHP
-      --py      start a webserver with Python
+      --php     start a web server with PHP
+      --py      start a web server with Python
 
 
 ## Bonus
