@@ -32,8 +32,11 @@ $ chmod u+x path/to/nexus.sh
 
     $ ./nexus.sh [options] <port>
 
+> Note: <port> is optional
 
-## Options
+### Options:
+      --php     start a webserver with PHP
+      --py      start a webserver with Python
 
 
 ## Bonus
