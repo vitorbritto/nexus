@@ -12,7 +12,7 @@ Nexus is a simple and fast method to start a web server.
 - [PHP v5.4+](http://www.php.net/)
 - [Python v2.6+](https://www.python.org/)
 
-**Important:** make sure you start the web server inside the current project directory.
+> **Important:** make sure you start the web server inside the current project directory.
 
 
 ## Installation
