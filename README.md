@@ -3,7 +3,9 @@
 
 ## Welcome
 
-Nexus is a simple and fast method to start a web server
+Nexus is a simple and fast method to start a web server.
+
+> Note: tested on **Linux** and **MacOS**.
 
 ## Requirements
 
