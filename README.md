@@ -5,7 +5,7 @@
 
 Nexus is a simple and fast method to start a web server.
 
-> Note: tested on **Linux** and **MacOS**.
+> Note: tested on **Linux** and **Mac**.
 
 ## Requirements
 
