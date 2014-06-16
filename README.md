@@ -5,7 +5,7 @@
 
 Nexus is a simple and fast method to start a web server.
 
-> Note: tested on **Linux** and **MacOS**.
+> Note: tested on **Linux** and **Mac**.
 
 ## Requirements
 
@@ -32,24 +32,41 @@ $ chmod u+x path/to/nexus.sh
 
 ## Usage
 
-    $ ./nexus.sh [options] <port>
+    $ ./nexus.sh [options] [commands] <port>
 
 > Note: `<port>` is optional
 
 ### Options:
-      --php     start a web server with PHP
-      --py      start a web server with Python
+
+    -l, --linux     Using Linux
+    -m, --mac       Using Mac
+    -h, --help      Output this help text
+
+### Commands:
+
+    php             Start a webserver with PHP
+    py              Start a webserver with Python
 
 
 ## Bonus
 
 If you prefer, put the following **alias** inside your `.bashrc` file:
 
-    alias nexus="bash ~/path/to/script/nexus.sh"
+    # Mac
+    alias nexuspy="bash ~/path/to/script/nexus.sh -m py"
+    alias nexusphp="bash ~/path/to/script/nexus.sh -m php"
+
+    # Linux
+    alias nexuspy="bash ~/path/to/script/nexus.sh -l py"
+    alias nexusphp="bash ~/path/to/script/nexus.sh -l php"
 
 Now, you can simply run:
 
-    $ nexus [options] <port>
+    $ nexuspy <port>
+
+    OR
+
+    $ nexusphp <port>
 
 
 ## License
