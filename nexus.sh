@@ -120,10 +120,9 @@ nexus_linux() {
 
     if [[ "${2}" == "php" ]]; then
         local PORT="${4:-4000}"
-        local IP=$(LANG=C /sbin/ifconfig  | sed -ne $'/127.0.0.1/ ! { s/^[ \t]*inet[ \t]\\{1,99\\}\\(addr:\\)\\{0,1\\}\\([0-9.]*\\)[ \t\/].*$/\\2/p; }')
         echo "HINT: Press CTRL+C to stop webserver"
-        sleep 1 && $OPEN_GNU "http://${IP}:${PORT}/" &
-        php -S "${IP}:${PORT}"
+        sleep 1 && $OPEN_GNU "http://localhost:${PORT}/" &
+        php -S "localhost:${PORT}"
     fi
     exit
 }
